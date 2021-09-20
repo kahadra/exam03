@@ -1,44 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chpark <chpark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/20 16:05:05 by chpark            #+#    #+#             */
-/*   Updated: 2021/09/20 16:39:42 by chpark           ###   ########.fr       */
+/*   Created: 2021/09/20 21:48:37 by chpark            #+#    #+#             */
+/*   Updated: 2021/09/20 21:49:49 by chpark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+void	*ft_print_memory(void *addr, unsigned int size);
 
-void	ft_puchar(char c)
-{
-	write (1, &c, 1);
-}
-
-void	ft_print_hexa(int n)
-{
-	char	*hexa;
-
-	hexa = "0123456789abcdef";
-	ft_putchar(hexa[n / 16]);
-	ft_putchar(hexa[n % 16]);
-}
-
-void	ft_putstr_non_printable(char *str)
+int	main(void)
 {
 	int	i;
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] < 32 || str[i] == 127)
-		{
-			ft_putchar('\\');
-			ft_print_hexa(str[i]);
-		}
-		else
-			ft_putchar(str[i]);
-	}
+	char str[] = "Bonjour les amiseeeeeee\neeeeeeeedwadwadawdadwadwegfrsdhgrtdhtrdharewfwafwafeawfwFAWFAGAWGRESHSERHEStrgesgresgrtdhtyjreeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee";
+	i = 150;
+	ft_print_memory(str, i);
 }
