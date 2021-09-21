@@ -6,7 +6,7 @@
 /*   By: chpark <chpark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 15:37:19 by chpark            #+#    #+#             */
-/*   Updated: 2021/09/20 15:50:47 by chpark           ###   ########.fr       */
+/*   Updated: 2021/09/21 20:06:20 by chpark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strcapitalize(char *str)
 
 	i = 0;
 	check = 1;
-	*ft_strlowcase(str);
+	ft_strlowcase(str);
 	while (str[i] != '\0')
 	{
 		if (str[i] >= 'a' && str[i] <= 'z')

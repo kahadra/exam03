@@ -6,13 +6,15 @@
 /*   By: chpark <chpark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 16:05:05 by chpark            #+#    #+#             */
-/*   Updated: 2021/09/20 16:39:42 by chpark           ###   ########.fr       */
+/*   Updated: 2021/09/21 19:49:49 by chpark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_puchar(char c)
+#include <unistd.h>
+
+void	ft_putchar(char c)
 {
-	write (1, &c, 1);
+	write(1, &c, 1);
 }
 
 void	ft_print_hexa(int n)
